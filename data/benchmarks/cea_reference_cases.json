@@ -1,0 +1,39 @@
+{
+  "case_set": "CEA_Reference_v1",
+  "sources": ["SRC-CEA", "SRC-ROCKETCEA"],
+  "cases": [
+    {
+      "case_id": "CEA-001",
+      "propellant_id": "LOX_RP1",
+      "Pc_Pa": 2000000.0,
+      "expansion_ratio": 25.0,
+      "MR": 2.56,
+      "kpi": "Isp_vac_s",
+      "reference_value": 340.0,
+      "threshold_rel": 0.05,
+      "notes": "Typical literature range 330-350 s"
+    },
+    {
+      "case_id": "CEA-002",
+      "propellant_id": "LOX_RP1",
+      "Pc_Pa": 2000000.0,
+      "expansion_ratio": 25.0,
+      "MR": 2.56,
+      "kpi": "T_c_K",
+      "reference_value": 3650.0,
+      "threshold_rel": 0.05,
+      "notes": "Typical literature range around 3600-3700 K"
+    },
+    {
+      "case_id": "CEA-003",
+      "propellant_id": "LOX_LH2",
+      "Pc_Pa": 10000000.0,
+      "expansion_ratio": 40.0,
+      "MR": 6.0,
+      "kpi": "Isp_vac_s",
+      "reference_value": 450.0,
+      "threshold_rel": 0.05,
+      "notes": "Typical vacuum Isp around 445-455 s"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "report_version": "1.0",
+  "report_date": "2026-01-26T22:24:46.254609",
+  "requirements": {},
+  "verification_cases": {},
+  "coverage": {
+    "total_requirements": 0,
+    "covered_requirements": 0,
+    "coverage_percentage": 0.0,
+    "uncovered_requirements": []
+  }
+}

@@ -1,0 +1,304 @@
+{
+  "report_version": "1.0",
+  "report_date": "2026-03-12T08:39:54.743110",
+  "n_test_cases": 10,
+  "n_passed": 10,
+  "n_failed": 0,
+  "n_error": 0,
+  "test_cases": [
+    {
+      "case_id": "VV-001",
+      "case_name": "兩體軌道能量守恆",
+      "description": "無推力時兩體問題能量應守恆",
+      "input_hash": "0452acd78b99bf31",
+      "model_version": "dynamics_v1.0",
+      "metric": "max|ΔE/E|",
+      "threshold": 1e-06,
+      "metric_value": 0.0,
+      "result": {
+        "energy_error": 0.0,
+        "relative_error": 0.0,
+        "max_relative_error": 0.0,
+        "conserved": "True",
+        "E_initial": -29477325519.199524,
+        "E_current": -29477325519.199524,
+        "time": 100.0,
+        "dt": 0.01,
+        "initial_conditions": {
+          "r0": [
+            6771000.0,
+            0.0,
+            0.0
+          ],
+          "v0": [
+            0.0,
+            7667.0,
+            0.0
+          ],
+          "m0": 1000.0
+        },
+        "threshold": 1e-06,
+        "formula": "E = 0.5*m*V² - μ*m/r"
+      },
+      "passed": true,
+      "plot_path": null,
+      "notes": "測試數值積分能量守恆",
+      "artifact_path": "V_V_Report_v1.0.json",
+      "status": "PASS"
+    },
+    {
+      "case_id": "VV-002",
+      "case_name": "角動量守恆",
+      "description": "無力矩時角動量應守恆",
+      "input_hash": "209ac1ac6af13365",
+      "model_version": "dynamics_v1.0",
+      "metric": "max|ΔH/H|",
+      "threshold": 1e-06,
+      "metric_value": 0.0,
+      "result": {
+        "angular_momentum_error": 0.0,
+        "relative_error": 0.0,
+        "conserved": "True",
+        "H_initial": "[0.0000000e+00 0.0000000e+00 5.1913257e+13]",
+        "H_current": "[0.0000000e+00 0.0000000e+00 5.1913257e+13]"
+      },
+      "passed": true,
+      "plot_path": null,
+      "notes": "測試數值積分角動量守恆",
+      "artifact_path": "V_V_Report_v1.0.json",
+      "status": "PASS"
+    },
+    {
+      "case_id": "VV-003",
+      "case_name": "RK4 收斂性測試",
+      "description": "不同步長下結果應收斂，收斂階數應 ≥ 3.5",
+      "input_hash": "8dcea54179a000ea",
+      "model_version": "rk4_integrator_v1.0",
+      "metric": "收斂階數",
+      "threshold": 3.5,
+      "metric_value": 8.232389896505872,
+      "result": {
+        "convergence_order": 8.232389896505872,
+        "expected_order_rk4": 4.0,
+        "order_match": "False",
+        "r_squared": -1.7412236158939898,
+        "note": "RK4 期望收斂階數為 4"
+      },
+      "passed": true,
+      "plot_path": null,
+      "notes": "RK4 期望收斂階數 ≥ 3.5",
+      "artifact_path": "V_V_Report_v1.0.json",
+      "status": "PASS"
+    },
+    {
+      "case_id": "VV-004",
+      "case_name": "ISA 模型與標準表比對",
+      "description": "ISA 計算結果應與 US Standard Atmosphere 1976 一致",
+      "input_hash": "c6ab8c7a433d5f3f",
+      "model_version": "isa_v1.0",
+      "metric": "最大相對誤差",
+      "threshold": 0.01,
+      "metric_value": 0.0,
+      "result": {
+        "max_relative_errors": {
+          "T": 0.0,
+          "p": 0.0,
+          "rho": 0.0
+        },
+        "worst_height_ranges": {
+          "T": {
+            "height": 0.0,
+            "relative_error": 0.0
+          },
+          "p": {
+            "height": 0.0,
+            "relative_error": 0.0
+          },
+          "rho": {
+            "height": 0.0,
+            "relative_error": 0.0
+          }
+        },
+        "n_reference_points": 6,
+        "heights_tested": [
+          0.0,
+          5000.0,
+          11000.0,
+          20000.0,
+          30000.0,
+          40000.0
+        ],
+        "reference_source": "US Standard Atmosphere 1976",
+        "validation_passed": true
+      },
+      "passed": true,
+      "plot_path": null,
+      "notes": "對照標準高度點的溫度、壓力、密度",
+      "artifact_path": "V_V_Report_v1.0.json",
+      "status": "PASS"
+    },
+    {
+      "case_id": "VV-005",
+      "case_name": "推力方程基準測試",
+      "description": "驗證 F = mdot*v_e + (p_e-p_a)*A_e",
+      "input_hash": "a69dc62ae67e0b39",
+      "model_version": "thrust_eq_v1.0",
+      "metric": "F_expected",
+      "threshold": 2500.0,
+      "metric_value": 2800.0,
+      "result": {
+        "valid": true,
+        "F_expected": 2800.0,
+        "mdot": 0.8,
+        "v_e": 3000.0
+      },
+      "passed": true,
+      "plot_path": null,
+      "notes": "推力方程驗算",
+      "artifact_path": "V_V_Report_v1.0.json",
+      "status": "PASS"
+    },
+    {
+      "case_id": "VV-006",
+      "case_name": "火箭方程基準測試",
+      "description": "驗證 Δv = I_sp * g0 * ln(m0/mf)",
+      "input_hash": "bff65dd5b148d1ac",
+      "model_version": "rocket_eq_v1.0",
+      "metric": "delta_v",
+      "threshold": 4000.0,
+      "metric_value": 4734.95829119156,
+      "result": {
+        "valid": true,
+        "delta_v": 4734.95829119156,
+        "I_sp": 300.0,
+        "mass_ratio": 5.0
+      },
+      "passed": true,
+      "plot_path": null,
+      "notes": "齊奧爾科夫斯基方程驗算",
+      "artifact_path": "V_V_Report_v1.0.json",
+      "status": "PASS"
+    },
+    {
+      "case_id": "VV-007",
+      "case_name": "薄壁圓筒應力參考",
+      "description": "對照標準壓力容器公式 σ_hoop = p*r/t",
+      "input_hash": "aa3514b81391020d",
+      "model_version": "structural_v1.0",
+      "metric": "sigma_hoop",
+      "threshold": 150000000.0,
+      "metric_value": 200000000.0,
+      "result": {
+        "case": "thin_cylinder_pressure",
+        "p": 2000000.0,
+        "r": 0.5,
+        "t": 0.005,
+        "sigma_hoop": 200000000.0,
+        "sigma_axial": 100000000.0,
+        "reference": "Standard pressure vessel formula"
+      },
+      "passed": true,
+      "plot_path": null,
+      "notes": "結構力學參考驗證",
+      "artifact_path": "V_V_Report_v1.0.json",
+      "status": "PASS"
+    },
+    {
+      "case_id": "VV-008",
+      "case_name": "載荷案例裕度評估",
+      "description": "違反案例下最小裕度計算",
+      "input_hash": "2fbbdca9768d1e4c",
+      "model_version": "load_cases_v1.0",
+      "metric": "min_margin",
+      "threshold": -0.5,
+      "metric_value": -0.16666666666666663,
+      "result": {
+        "margins": {
+          "max_q": {
+            "MS": -0.09090909090909094,
+            "type": "q"
+          },
+          "max_load_factor": {
+            "MS": -0.16666666666666663,
+            "type": "n"
+          },
+          "max_bending": {
+            "MS": -0.16666666666666663,
+            "type": "M_bend"
+          },
+          "thermal_gradient": {
+            "MS": -0.16666666666666663,
+            "type": "delta_T"
+          }
+        },
+        "min_margin": -0.16666666666666663,
+        "bottleneck_cases": [
+          "max_load_factor",
+          "max_bending",
+          "thermal_gradient"
+        ]
+      },
+      "passed": true,
+      "plot_path": null,
+      "notes": "載荷案例裕度分析",
+      "artifact_path": "V_V_Report_v1.0.json",
+      "status": "PASS"
+    },
+    {
+      "case_id": "VV-009",
+      "case_name": "事件系統競合測試",
+      "description": "同時事件按優先級排序處理",
+      "input_hash": "ca107da3fcc28081",
+      "model_version": "event_system_v1.0",
+      "metric": "n_events_processed",
+      "threshold": 1,
+      "metric_value": 2.0,
+      "result": {
+        "concurrent_results": [
+          {
+            "handled": false,
+            "action": "no_handler",
+            "event_type": "overheat",
+            "priority": 3
+          },
+          {
+            "handled": false,
+            "action": "no_handler",
+            "event_type": "max_q",
+            "priority": 5
+          }
+        ],
+        "n_processed": 2
+      },
+      "passed": true,
+      "plot_path": null,
+      "notes": "事件優先級與處理順序",
+      "artifact_path": "V_V_Report_v1.0.json",
+      "status": "PASS"
+    },
+    {
+      "case_id": "VV-010",
+      "case_name": "座標系一致性",
+      "description": "ECI ↔ ECEF 轉換互逆誤差",
+      "input_hash": "90ebb442deac3241",
+      "model_version": "coordinate_v1.0",
+      "metric": "max_error",
+      "threshold": 1e-10,
+      "metric_value": 0.0,
+      "result": {
+        "error_vector": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_error": 0.0,
+        "consistent": "True"
+      },
+      "passed": true,
+      "plot_path": null,
+      "notes": "座標轉換數值一致性",
+      "artifact_path": "V_V_Report_v1.0.json",
+      "status": "PASS"
+    }
+  ]
+}

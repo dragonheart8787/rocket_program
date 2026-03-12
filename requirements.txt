@@ -1,0 +1,14 @@
+numpy>=1.20
+matplotlib>=3.3
+scipy>=1.7
+# NASA CEA 化學平衡計算（可選：未安裝時推進模組會使用內建公式）
+rocketcea>=1.2.0
+# Cantera：化學動力學／熱力學／輸運（可選）
+cantera>=3.0
+# 超參數優化、敏感度分析、控制系統（可選）
+optuna>=3.0
+SALib>=1.2
+control>=0.10
+# PyTorch / TensorFlow：與 Cantera 耦合可做 ROM、代理模型（可選，二擇一或皆裝）
+# torch
+# tensorflow

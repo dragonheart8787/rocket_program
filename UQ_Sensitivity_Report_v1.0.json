@@ -1,0 +1,359 @@
+{
+  "report_version": "1.0",
+  "report_date": "2026-03-12T08:39:54.995433",
+  "monte_carlo": {
+    "n_samples": 1000,
+    "random_seed": 42,
+    "uncertain_parameters": {
+      "mdot": {
+        "mean": 0.8,
+        "std": 0.05,
+        "lower_bound": 0.5,
+        "upper_bound": 1.0,
+        "distribution": "gaussian"
+      },
+      "v_e": {
+        "mean": 3000.0,
+        "std": 50.0,
+        "lower_bound": 2800.0,
+        "upper_bound": 3200.0,
+        "distribution": "gaussian"
+      },
+      "C_D": {
+        "mean": 0.3,
+        "std": 0.02,
+        "lower_bound": 0.2,
+        "upper_bound": 0.4,
+        "distribution": "gaussian"
+      },
+      "rho": {
+        "mean": 0.5,
+        "std": 0.05,
+        "lower_bound": 0.3,
+        "upper_bound": 0.8,
+        "distribution": "gaussian"
+      },
+      "m": {
+        "mean": 1000.0,
+        "std": 30.0,
+        "lower_bound": 900.0,
+        "upper_bound": 1100.0,
+        "distribution": "gaussian"
+      },
+      "q_dot_max": {
+        "mean": 100000.0,
+        "std": 5000.0,
+        "lower_bound": 85000.0,
+        "upper_bound": 115000.0,
+        "distribution": "gaussian"
+      }
+    },
+    "kpi_statistics": {
+      "thrust": {
+        "mean": 2798.6023292976647,
+        "std": 151.3398362813716,
+        "variance": 22903.746045672357,
+        "unique_count": 1000,
+        "degenerate": false,
+        "p10": 2604.1835822373064,
+        "p50": 2800.612889496481,
+        "p90": 2982.7299686795136,
+        "min": 2337.6088742727065,
+        "max": 3317.6447556033913
+      },
+      "max_q": {
+        "mean": 10036.298284100447,
+        "std": 1003.7379171353904,
+        "variance": 1007489.8062952919,
+        "unique_count": 1000,
+        "degenerate": false,
+        "p10": 8800.587474002592,
+        "p50": 9979.73304319098,
+        "p90": 11358.127400991032,
+        "min": 6889.511934880662,
+        "max": 13208.160913916496
+      },
+      "drag": {
+        "mean": 3003.6224538296915,
+        "std": 370.05549734943713,
+        "variance": 136941.0711185393,
+        "unique_count": 1000,
+        "degenerate": false,
+        "p10": 2523.9173056766385,
+        "p50": 2987.606726702985,
+        "p90": 3499.786187894806,
+        "min": 1829.0779460026058,
+        "max": 4239.53005523877
+      },
+      "fuel_margin": {
+        "mean": 9.00247714251315,
+        "std": 0.294753957154487,
+        "variance": 0.08687989525822915,
+        "unique_count": 1000,
+        "degenerate": false,
+        "p10": 8.63606428852863,
+        "p50": 9.003089895561418,
+        "p90": 9.373625750245854,
+        "min": 8.056900109392577,
+        "max": 9.981307836664378
+      },
+      "heat_flux": {
+        "mean": 99942.73879418313,
+        "std": 5036.479144219724,
+        "variance": 25366122.17016024,
+        "unique_count": 997,
+        "degenerate": false,
+        "p10": 93343.32393805936,
+        "p50": 100276.85282322922,
+        "p90": 106496.20080531406,
+        "min": 85000.0,
+        "max": 115000.0
+      }
+    },
+    "kpi_units": {
+      "max_q": "Pa",
+      "thrust": "N",
+      "drag": "N",
+      "fuel_margin": "-",
+      "heat_flux": "W/m²"
+    },
+    "bootstrap_cis": {
+      "thrust": {
+        "P90_CI": {
+          "percentile": 90,
+          "value": 2993.6307448312846,
+          "ci_lower": 2974.6831225437572,
+          "ci_upper": 3008.048057999512,
+          "confidence": 0.95,
+          "ci_width": 33.364935455754676
+        }
+      },
+      "max_q": {
+        "P90_CI": {
+          "percentile": 90,
+          "value": 11316.937127815547,
+          "ci_lower": 11189.268295211812,
+          "ci_upper": 11372.297798728812,
+          "confidence": 0.95,
+          "ci_width": 183.0295035170002
+        }
+      },
+      "drag": {
+        "P90_CI": {
+          "percentile": 90,
+          "value": 3478.610264070605,
+          "ci_lower": 3424.3160729910996,
+          "ci_upper": 3517.477487262619,
+          "confidence": 0.95,
+          "ci_width": 93.16141427151933
+        }
+      },
+      "fuel_margin": {
+        "P90_CI": {
+          "percentile": 90,
+          "value": 9.383915178820242,
+          "ci_lower": 9.336805016592097,
+          "ci_upper": 9.408051547872017,
+          "confidence": 0.95,
+          "ci_width": 0.07124653127991998
+        }
+      },
+      "heat_flux": {
+        "P90_CI": {
+          "percentile": 90,
+          "value": 106259.24261298556,
+          "ci_lower": 105560.01274783161,
+          "ci_upper": 106743.08962330225,
+          "confidence": 0.95,
+          "ci_width": 1183.0768754706369
+        }
+      }
+    }
+  },
+  "sensitivity_analysis": {
+    "kpi_sensitivities": {
+      "thrust": {
+        "sensitivities": {
+          "mdot": {
+            "sensitivity": 0.8571428571428571,
+            "absolute_effect": 30.0,
+            "relative_effect": 0.8571428571428571
+          },
+          "v_e": {
+            "sensitivity": 0.8571428571428571,
+            "absolute_effect": 8.0,
+            "relative_effect": 0.8571428571428571
+          },
+          "C_D": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          },
+          "rho": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          },
+          "m": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          },
+          "q_dot_max": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          }
+        },
+        "ranked_parameters": [
+          "mdot",
+          "v_e",
+          "C_D",
+          "rho",
+          "m",
+          "q_dot_max"
+        ],
+        "base_value": 2800.0
+      },
+      "max_q": {
+        "sensitivities": {
+          "mdot": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          },
+          "v_e": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          },
+          "C_D": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          },
+          "rho": {
+            "sensitivity": 1.0000000000000009,
+            "absolute_effect": 1000.0000000000009,
+            "relative_effect": 1.0000000000000009
+          },
+          "m": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          },
+          "q_dot_max": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          }
+        },
+        "ranked_parameters": [
+          "rho",
+          "mdot",
+          "v_e",
+          "C_D",
+          "m",
+          "q_dot_max"
+        ],
+        "base_value": 10000.0
+      },
+      "drag": {
+        "sensitivities": {
+          "mdot": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          },
+          "v_e": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          },
+          "C_D": {
+            "sensitivity": 1.0000000000000022,
+            "absolute_effect": 100.00000000000023,
+            "relative_effect": 1.0000000000000022
+          },
+          "rho": {
+            "sensitivity": 1.0,
+            "absolute_effect": 300.0,
+            "relative_effect": 1.0
+          },
+          "m": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          },
+          "q_dot_max": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          }
+        },
+        "ranked_parameters": [
+          "C_D",
+          "rho",
+          "mdot",
+          "v_e",
+          "m",
+          "q_dot_max"
+        ],
+        "base_value": 3000.0
+      },
+      "fuel_margin": {
+        "sensitivities": {
+          "mdot": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          },
+          "v_e": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          },
+          "C_D": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          },
+          "rho": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          },
+          "m": {
+            "sensitivity": 1.1111111111111072,
+            "absolute_effect": 0.1999999999999993,
+            "relative_effect": 1.1111111111111072
+          },
+          "q_dot_max": {
+            "sensitivity": 0.0,
+            "absolute_effect": 0.0,
+            "relative_effect": 0.0
+          }
+        },
+        "ranked_parameters": [
+          "m",
+          "mdot",
+          "v_e",
+          "C_D",
+          "rho",
+          "q_dot_max"
+        ],
+        "base_value": 9.0
+      }
+    },
+    "overall_ranked_parameters": [
+      "rho",
+      "m",
+      "C_D",
+      "mdot",
+      "v_e",
+      "q_dot_max"
+    ],
+    "note": "多 KPI 敏感度分析，涵蓋 4 個 KPI"
+  },
+  "note": "多 KPI 不確定度與敏感度分析；degenerate=True 表示 std==0 或 unique_count<5"
+}

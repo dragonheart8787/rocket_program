@@ -1,0 +1,150 @@
+{
+  "timestamp": "2026-02-21T15:15:15.877673Z",
+  "cea": [
+    {
+      "case_id": "CEA-001",
+      "name": "LOX_RP1 Isp_vac_s",
+      "source": "Chemical Equilibrium with Applications (CEA) / RocketCEA Documentation",
+      "passed": true,
+      "ref_value": 340.0,
+      "model_value": 345.7329807607899,
+      "rel_error": 0.016861708119970377,
+      "threshold": 0.05,
+      "notes": "Typical literature range 330-350 s"
+    },
+    {
+      "case_id": "CEA-002",
+      "name": "LOX_RP1 T_c_K",
+      "source": "Chemical Equilibrium with Applications (CEA) / RocketCEA Documentation",
+      "passed": true,
+      "ref_value": 3650.0,
+      "model_value": 3493.207791157344,
+      "rel_error": 0.04295676954593309,
+      "threshold": 0.05,
+      "notes": "Typical literature range around 3600-3700 K"
+    },
+    {
+      "case_id": "CEA-003",
+      "name": "LOX_LH2 Isp_vac_s",
+      "source": "Chemical Equilibrium with Applications (CEA) / RocketCEA Documentation",
+      "passed": true,
+      "ref_value": 450.0,
+      "model_value": 452.0797603792078,
+      "rel_error": 0.004621689731572916,
+      "threshold": 0.05,
+      "notes": "Typical vacuum Isp around 445-455 s"
+    }
+  ],
+  "gmat": [
+    {
+      "case_id": "GMAT-001",
+      "name": "LEO_400km_orbital_velocity",
+      "source": "General Mission Analysis Tool (GMAT) / U.S. Standard Atmosphere, 1976",
+      "passed": true,
+      "ref_value": 7668.6,
+      "model_value": 7672.598648385013,
+      "rel_error": 0.0005214313414459653,
+      "threshold": 0.01,
+      "notes": "Two-body circular orbit velocity at 400 km"
+    },
+    {
+      "case_id": "GMAT-002",
+      "name": "LEO_total_dv_budget",
+      "source": "General Mission Analysis Tool (GMAT) / U.S. Standard Atmosphere, 1976",
+      "passed": true,
+      "ref_value": 9400.0,
+      "model_value": 9082.598648385014,
+      "rel_error": 0.03376610123563683,
+      "threshold": 0.05,
+      "notes": "Typical launch-to-LEO budget including losses"
+    }
+  ],
+  "sutton_graves": [
+    {
+      "case_id": "SG-001",
+      "name": "Sutton-Graves h=70km V=7.0km/s",
+      "source": "A General Stagnation-Point Convective Heating Equation for Arbitrary Gas Mixtures / U.S. Standard Atmosphere, 1976",
+      "passed": true,
+      "ref_value": 1396466.6574266043,
+      "model_value": 1396466.6574266043,
+      "rel_error": 0.0,
+      "threshold": 1e-05,
+      "notes": "q=1396467 W/m^2"
+    },
+    {
+      "case_id": "SG-002",
+      "name": "Sutton-Graves h=50km V=5.0km/s",
+      "source": "A General Stagnation-Point Convective Heating Equation for Arbitrary Gas Mixtures / U.S. Standard Atmosphere, 1976",
+      "passed": true,
+      "ref_value": 1846658.6087972717,
+      "model_value": 1846658.6087972717,
+      "rel_error": 0.0,
+      "threshold": 1e-05,
+      "notes": "q=1846659 W/m^2"
+    },
+    {
+      "case_id": "SG-003",
+      "name": "Sutton-Graves h=40km V=4.0km/s",
+      "source": "A General Stagnation-Point Convective Heating Equation for Arbitrary Gas Mixtures / U.S. Standard Atmosphere, 1976",
+      "passed": true,
+      "ref_value": 1876605.0848026667,
+      "model_value": 1876605.0848026667,
+      "rel_error": 0.0,
+      "threshold": 1e-05,
+      "notes": "q=1876605 W/m^2"
+    }
+  ],
+  "source_registry": {
+    "sources": [
+      {
+        "id": "SRC-USSA1976",
+        "title": "U.S. Standard Atmosphere, 1976",
+        "organization": "NOAA / NASA / USAF",
+        "year": 1976,
+        "reference": "NOAA-S/T 76-1562",
+        "url": "https://www.ngdc.noaa.gov/stp/space-weather/online-publications/miscellaneous/us-standard-atmosphere-1976/"
+      },
+      {
+        "id": "SRC-SUTTON-GRAVES-1971",
+        "title": "A General Stagnation-Point Convective Heating Equation for Arbitrary Gas Mixtures",
+        "organization": "NASA",
+        "year": 1971,
+        "reference": "Sutton, K. and Graves, R.A.",
+        "url": "https://ntrs.nasa.gov/"
+      },
+      {
+        "id": "SRC-GMAT",
+        "title": "General Mission Analysis Tool (GMAT)",
+        "organization": "NASA",
+        "year": 2024,
+        "reference": "GMAT Documentation",
+        "url": "https://gmat.atlassian.net/"
+      },
+      {
+        "id": "SRC-CEA",
+        "title": "Chemical Equilibrium with Applications (CEA)",
+        "organization": "NASA Glenn",
+        "year": 1994,
+        "reference": "RP-1311",
+        "url": "https://www1.grc.nasa.gov/research-and-engineering/ceaweb/"
+      },
+      {
+        "id": "SRC-ROCKETCEA",
+        "title": "RocketCEA Documentation",
+        "organization": "Applied Python",
+        "year": 2024,
+        "reference": "RocketCEA v1.2.x docs",
+        "url": "https://rocketcea.readthedocs.io/"
+      }
+    ]
+  },
+  "summary": {
+    "total_cases": 8,
+    "passed": 8,
+    "failed": 0,
+    "pass_rate": 1.0,
+    "cea_available": true,
+    "gmat_available": true,
+    "sutton_graves_ok": true
+  }
+}

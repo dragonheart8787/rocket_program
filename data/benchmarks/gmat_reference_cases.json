@@ -1,0 +1,22 @@
+{
+  "case_set": "GMAT_Reference_v1",
+  "sources": ["SRC-GMAT", "SRC-USSA1976"],
+  "cases": [
+    {
+      "case_id": "GMAT-001",
+      "name": "LEO_400km_orbital_velocity",
+      "target": "orbit_velocity_m_s",
+      "reference_value": 7668.6,
+      "threshold_rel": 0.01,
+      "notes": "Two-body circular orbit velocity at 400 km"
+    },
+    {
+      "case_id": "GMAT-002",
+      "name": "LEO_total_dv_budget",
+      "target": "dv_total_m_s",
+      "reference_value": 9400.0,
+      "threshold_rel": 0.05,
+      "notes": "Typical launch-to-LEO budget including losses"
+    }
+  ]
+}

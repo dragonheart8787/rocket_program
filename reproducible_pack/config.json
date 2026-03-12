@@ -1,0 +1,26 @@
+{
+  "simulation_id": "sim_001",
+  "timestamp": "2026-03-12T08:39:54.997536",
+  "random_seed": 42,
+  "dt": 0.01,
+  "t_end": 100.0,
+  "initial_conditions": {
+    "r0": [
+      6771000.0,
+      0.0,
+      0.0
+    ],
+    "v0": [
+      0.0,
+      7667.0,
+      0.0
+    ]
+  },
+  "parameters": {
+    "mu": 398600441800000.0
+  },
+  "model_versions": {
+    "dynamics": "v1.0",
+    "isa": "v1.0"
+  }
+}

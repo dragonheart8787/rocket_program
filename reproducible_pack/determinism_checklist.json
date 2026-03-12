@@ -1,0 +1,8 @@
+{
+  "random_seed": 42,
+  "numpy_random_state": "需設置 np.random.seed()",
+  "blas_threads": "需設置環境變數 OMP_NUM_THREADS=1",
+  "sorting_stability": "需使用穩定排序算法",
+  "floating_point": "需使用相同精度（float64）",
+  "note": "確保所有隨機性來源都被固定"
+}

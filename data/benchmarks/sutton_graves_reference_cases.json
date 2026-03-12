@@ -1,0 +1,28 @@
+{
+  "case_set": "SuttonGraves_Reference_v1",
+  "sources": ["SRC-SUTTON-GRAVES-1971", "SRC-USSA1976"],
+  "constants": {
+    "k_sg": 0.000183,
+    "R_n_m": 0.15
+  },
+  "cases": [
+    {
+      "case_id": "SG-001",
+      "h_m": 70000.0,
+      "V_m_s": 7000.0,
+      "threshold_rel": 0.00001
+    },
+    {
+      "case_id": "SG-002",
+      "h_m": 50000.0,
+      "V_m_s": 5000.0,
+      "threshold_rel": 0.00001
+    },
+    {
+      "case_id": "SG-003",
+      "h_m": 40000.0,
+      "V_m_s": 4000.0,
+      "threshold_rel": 0.00001
+    }
+  ]
+}

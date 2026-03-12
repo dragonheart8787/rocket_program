@@ -1,0 +1,83 @@
+{
+  "name": "Falcon-EDU",
+  "mission": {
+    "delta_v_budget": {
+      "dv_ideal_m_s": 7672.598648385013,
+      "dv_gravity_loss_m_s": 1240.0,
+      "dv_drag_loss_m_s": 100.0,
+      "dv_steering_loss_m_s": 70.0,
+      "dv_total_m_s": 9082.598648385014,
+      "orbit_type": "LEO",
+      "target_altitude_km": 400.0
+    },
+    "staging": {
+      "stages": [
+        {
+          "stage_index": 1,
+          "m0_kg": 16881.273424001774,
+          "m_prop_kg": 12751.674457200057,
+          "m_struct_kg": 1108.8412571478311,
+          "m_payload_kg": 3109.4650102257137,
+          "dv_m_s": 4142.401410581003,
+          "isp_s": 300.0,
+          "mass_ratio": 4.0878723478265355,
+          "structural_fraction": 0.08
+        },
+        {
+          "stage_index": 2,
+          "m0_kg": 3109.4650102257137,
+          "m_prop_kg": 2372.2409183870127,
+          "m_struct_kg": 263.58232426522363,
+          "m_payload_kg": 500.0,
+          "dv_m_s": 4940.19723780401,
+          "isp_s": 350.0,
+          "mass_ratio": 4.217801676109684,
+          "structural_fraction": 0.1
+        }
+      ],
+      "total_mass_kg": 16881.273424001774,
+      "payload_ratio": 0.029618618657588983,
+      "dv_total_m_s": 9082.598648385014
+    },
+    "mass_budget": {
+      "total_mass_kg": 16881.273424001774,
+      "payload_mass_kg": 500.0,
+      "total_propellant_kg": 15123.91537558707,
+      "total_structure_kg": 1372.4235814130548,
+      "payload_fraction": 0.029618618657588983,
+      "propellant_fraction": 0.8958989642383202,
+      "structure_fraction": 0.08129858138911158
+    },
+    "launch_window": {
+      "latitude_deg": 28.5,
+      "target_inclination_deg": 28.5,
+      "eastward_velocity_m_s": 408.73783909908013,
+      "dv_plane_change_m_s": 0.0,
+      "launch_azimuth_deg": 90.0,
+      "accessible": true,
+      "note": "可直接入軌"
+    }
+  },
+  "propulsion": {
+    "F_vac_N": 215213.3620305331,
+    "I_sp_vac_s": 303.1707392750301,
+    "mdot_kg_s": 72.38711593236468,
+    "cycle": "GasGenerator"
+  },
+  "structural": {
+    "min_MS_yield": 2.594933477121772,
+    "min_MS_buckling": 12.314942095374965,
+    "total_mass_kg": 847.4760342323827
+  },
+  "thermal": {
+    "max_wall_temp_K": 305.4303370192247,
+    "margin_K": 594.5696629807753,
+    "tps_mass_kg": 1.2699262446969615
+  },
+  "gnc": {
+    "final_altitude_m": -214.30421238439106,
+    "final_velocity_m_s": 1025.7869378294783,
+    "max_q_Pa": 641032.7847773834,
+    "orbit_achieved": false
+  }
+}

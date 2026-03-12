@@ -1,0 +1,26 @@
+{
+  "config.json": {
+    "sha256": "1cce996fbd4c0aa2f7f9387c43369a7b01e59bfc90a0ce21c4bdfc51a26367ae",
+    "size": 416
+  },
+  "determinism_checklist.json": {
+    "sha256": "cdac1e7c2cadf8bef7d9bb4c3b0a7f763b1b9a1e1fe75a7e8d11c5320ac238d8",
+    "size": 310
+  },
+  "model_versions.json": {
+    "sha256": "7a25f4c811a70eb66d817b4462211824e280aa0e9ccfd65bcc5d6889fae16d6e",
+    "size": 413
+  },
+  "output_summary.json": {
+    "sha256": "fa02519859b6adc135d84b11eb9964d05588d49378505656dc6760b220d82e8b",
+    "size": 233
+  },
+  "README.md": {
+    "sha256": "011fe0e325d0ad01529abae9230953b40f9b734bfe6472558184387f6e62d770",
+    "size": 771
+  },
+  "version_info.json": {
+    "sha256": "861bfa69213885e87f8d0d71544bf0ae0b7cd47c3c2953e78991a0829be0064f",
+    "size": 2562
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "sources": [
+    {
+      "id": "SRC-USSA1976",
+      "title": "U.S. Standard Atmosphere, 1976",
+      "organization": "NOAA / NASA / USAF",
+      "year": 1976,
+      "reference": "NOAA-S/T 76-1562",
+      "url": "https://www.ngdc.noaa.gov/stp/space-weather/online-publications/miscellaneous/us-standard-atmosphere-1976/"
+    },
+    {
+      "id": "SRC-SUTTON-GRAVES-1971",
+      "title": "A General Stagnation-Point Convective Heating Equation for Arbitrary Gas Mixtures",
+      "organization": "NASA",
+      "year": 1971,
+      "reference": "Sutton, K. and Graves, R.A.",
+      "url": "https://ntrs.nasa.gov/"
+    },
+    {
+      "id": "SRC-GMAT",
+      "title": "General Mission Analysis Tool (GMAT)",
+      "organization": "NASA",
+      "year": 2024,
+      "reference": "GMAT Documentation",
+      "url": "https://gmat.atlassian.net/"
+    },
+    {
+      "id": "SRC-CEA",
+      "title": "Chemical Equilibrium with Applications (CEA)",
+      "organization": "NASA Glenn",
+      "year": 1994,
+      "reference": "RP-1311",
+      "url": "https://www1.grc.nasa.gov/research-and-engineering/ceaweb/"
+    },
+    {
+      "id": "SRC-ROCKETCEA",
+      "title": "RocketCEA Documentation",
+      "organization": "Applied Python",
+      "year": 2024,
+      "reference": "RocketCEA v1.2.x docs",
+      "url": "https://rocketcea.readthedocs.io/"
+    }
+  ]
+}

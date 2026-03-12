@@ -1,0 +1,13 @@
+alpha_deg,M,C_L,C_D,C_m,source
+-5.0,0.30,-0.420,0.028,0.045,wind_tunnel_sample
+0.0,0.30,0.000,0.022,0.000,wind_tunnel_sample
+5.0,0.30,0.460,0.028,-0.048,wind_tunnel_sample
+10.0,0.30,0.910,0.043,-0.098,wind_tunnel_sample
+-5.0,0.80,-0.390,0.034,0.041,wind_tunnel_sample
+0.0,0.80,0.000,0.026,0.000,wind_tunnel_sample
+5.0,0.80,0.430,0.034,-0.043,wind_tunnel_sample
+10.0,0.80,0.860,0.050,-0.091,wind_tunnel_sample
+-5.0,1.20,-0.340,0.042,0.035,wind_tunnel_sample
+0.0,1.20,0.000,0.032,0.000,wind_tunnel_sample
+5.0,1.20,0.380,0.043,-0.039,wind_tunnel_sample
+10.0,1.20,0.770,0.063,-0.083,wind_tunnel_sample

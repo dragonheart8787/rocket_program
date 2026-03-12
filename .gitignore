@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# 虛擬環境
+venv/
+.venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+.cursor/
+
+# 測試
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 專案特定
+System_Assurance_Package_v1.0/
+
+# 系統
+.DS_Store
+Thumbs.db

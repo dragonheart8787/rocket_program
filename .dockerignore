@@ -1,0 +1,8 @@
+__pycache__
+*.pyc
+.git
+.pytest_cache
+*.egg-info
+.idea
+.cursor
+System_Assurance_Package_v1.0

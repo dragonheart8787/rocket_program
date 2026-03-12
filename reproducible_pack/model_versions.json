@@ -1,0 +1,18 @@
+{
+  "aero_table": {
+    "model_name": "aero_table",
+    "version": "1.0",
+    "hash": "37007c776e809d59",
+    "source": "placeholder",
+    "date": "2026-03-12T08:39:54.997588",
+    "notes": ""
+  },
+  "material_db": {
+    "model_name": "material_db",
+    "version": "1.0",
+    "hash": "98108d102073fb64",
+    "source": "placeholder",
+    "date": "2026-03-12T08:39:54.997602",
+    "notes": ""
+  }
+}

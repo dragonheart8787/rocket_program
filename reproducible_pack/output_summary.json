@@ -1,0 +1,13 @@
+{
+  "kpis": {
+    "max_q": 50000.0,
+    "max_heat_flux": 100000.0,
+    "fuel_margin": 0.9,
+    "min_MS": 0.2
+  },
+  "plots": [
+    "trajectory.png",
+    "kpi_history.png"
+  ],
+  "timestamp": "2026-03-12T08:39:54.997606"
+}
