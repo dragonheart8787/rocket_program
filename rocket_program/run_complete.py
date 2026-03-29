@@ -14,24 +14,24 @@ def main():
 
     # 1. 完整設計
     print("\n[1/4] 執行完整設計...")
-    from rocket_design_example import main as design_main
+    from .rocket_design_example import main as design_main
     state = design_main()
 
     # 2. 工程報告（V&V、UQ、可重現包）
     print("\n[2/4] 生成工程報告...")
-    import generate_engineering_reports  # 匯入時自動執行
+    from . import generate_engineering_reports  # noqa: F401 — 匯入時自動執行
 
     # 3. Benchmark Pack（若存在）
     print("\n[3/4] 執行 Benchmark Pack...")
     try:
-        import benchmark_pack
+        from . import benchmark_pack
         print("  Benchmark Pack 完成")
     except Exception as e:
         print(f"  Benchmark Pack 跳過: {e}")
 
     # 4. 整合報告
     print("\n[4/4] 生成整合報告...")
-    from generate_comprehensive_report import generate_comprehensive_report
+    from .generate_comprehensive_report import generate_comprehensive_report
     report_path = generate_comprehensive_report(state)
     print(f"  整合報告: {report_path}")
 

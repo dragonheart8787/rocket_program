@@ -7,7 +7,7 @@
 
 1. **config.json**: 完整模擬配置
    - 隨機種子: 42
-   - 配置 Hash: b4980a5d447d8964
+   - 配置 Hash: cce52eabb2a8a983
 
 2. **model_versions.json**: 模型版本與 hash
 

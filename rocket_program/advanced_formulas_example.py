@@ -6,7 +6,7 @@
 
 import numpy as np
 import math
-from aerospace_sim import eng_formulas, Earth
+from .aerospace_sim import eng_formulas, Earth
 
 earth = Earth()
 

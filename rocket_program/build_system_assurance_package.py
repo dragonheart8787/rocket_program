@@ -10,7 +10,7 @@ import shutil
 from pathlib import Path
 from datetime import datetime
 
-ROOT = Path(__file__).parent
+ROOT = Path(__file__).resolve().parents[1]
 SAP_DIR = ROOT / "System_Assurance_Package_v1.0"
 SAP_VERSION = "1.0"
 
@@ -33,7 +33,7 @@ def build_sap():
     ensure_dir(SAP_DIR / "06_External_Validation")
     ensure_dir(SAP_DIR / "07_Container")
 
-    from requirements_traceability import rtm, Requirement, RequirementType, VerificationCase, VerificationMethod
+    from .requirements_traceability import rtm, Requirement, RequirementType, VerificationCase, VerificationMethod
 
     if len(rtm.requirements) == 0:
         for r in [
@@ -85,7 +85,7 @@ def build_sap():
     (SAP_DIR / "04_Regression_Gates" / "regression_gates_spec.json").write_text(
         json.dumps(gates, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    from reproducibility import reproducibility_pack, SimulationConfig
+    from .reproducibility import reproducibility_pack, SimulationConfig
     config = SimulationConfig(
         simulation_id="SAP_baseline", timestamp=datetime.now().isoformat(),
         random_seed=42, dt=0.01, t_end=100.0,
@@ -115,7 +115,7 @@ def build_sap():
 
     # 產生 Benchmark Pack 並複製至 06_External_Validation
     try:
-        from benchmark_pack import run_all_benchmarks, write_report
+        from .benchmark_pack import run_all_benchmarks, write_report
         write_report(run_all_benchmarks(), output_dir=str(ROOT / "benchmark_pack_output"))
     except Exception:
         pass
@@ -125,7 +125,7 @@ def build_sap():
             shutil.copy2(src, SAP_DIR / "06_External_Validation" / f)
     # 產生並複製真實氣動係數 V&V 報告
     try:
-        from integrate_real_aero_vv import run_real_aero_vv, write_reports, DEFAULT_CSV
+        from .integrate_real_aero_vv import run_real_aero_vv, write_reports, DEFAULT_CSV
         rep = run_real_aero_vv(DEFAULT_CSV)
         write_reports(rep, ROOT / "benchmark_pack_output")
     except Exception:
@@ -215,7 +215,7 @@ System_Assurance_Package_v1.0
     (SAP_DIR / "07_Container" / "conda_environment_sap.yml").write_text(conda_yml, encoding="utf-8")
 
     # 彙整 01–07 測試結果為單一 MD
-    from generate_sap_test_report import generate_sap_test_report
+    from .generate_sap_test_report import generate_sap_test_report
     generate_sap_test_report(SAP_DIR, ROOT)
 
     manifest = {}

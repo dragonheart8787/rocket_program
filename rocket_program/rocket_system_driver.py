@@ -10,30 +10,30 @@ import os
 import math
 import numpy as np
 
-from mission_planning import (
+from .mission_planning import (
     MissionSpec, OrbitType, run_mission_planning,
     DeltaVBudget, StagingResult, MassBudget, LaunchWindowResult,
 )
-from propulsion_advanced import (
+from .propulsion_advanced import (
     PropulsionCycle, design_propulsion_system, PropulsionSystemResult,
 )
-from structural_analysis import (
+from .structural_analysis import (
     ShellSection, analyze_structure, StructuralResult, MATERIAL_DB,
 )
-from thermal_analysis import (
+from .thermal_analysis import (
     run_thermal_analysis, ThermalResult,
 )
-from guidance_navigation import (
+from .guidance_navigation import (
     GravityTurnParams, TVCSpec, AttitudeControllerParams,
     simulate_gravity_turn, GNCResult,
 )
-from rocket_design_generator import (
+from .rocket_design_generator import (
     NoseConeSpec, BodyStageSpec, FinSpec, RocketExteriorSpec,
     EngineDesignSpec, generate_full_rocket_design,
 )
 
 try:
-    from cea_bridge import get_cea_properties_for_engine
+    from .cea_bridge import get_cea_properties_for_engine
 except ImportError:
     get_cea_properties_for_engine = None
 

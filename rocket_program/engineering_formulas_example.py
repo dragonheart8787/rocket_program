@@ -6,7 +6,7 @@
 
 import numpy as np
 import math
-from aerospace_sim import eng_formulas, ISA, Earth
+from .aerospace_sim import eng_formulas, ISA, Earth
 
 # ========== 範例 1: 大氣/環境 ==========
 print("=== 範例 1: 大氣/環境 ===")

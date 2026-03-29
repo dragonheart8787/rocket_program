@@ -15,7 +15,10 @@
 ### 使用方式
 
 ```bash
-python benchmark_pack.py
+# 自儲存庫根目錄（建議先 pip install -e .）
+python -m rocket_program.benchmark_pack
+# 或一鍵 TRL4 流程
+python scripts/run_trl4_upgrade.py
 ```
 
 輸出：`benchmark_pack_output/benchmark_report.json`、`benchmark_report.md`

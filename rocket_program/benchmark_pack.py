@@ -14,8 +14,8 @@ from typing import List, Dict, Any, Optional
 from pathlib import Path
 
 REPORT_REL_TOL = 0.05  # 5% 相對誤差閾值
-ROOT = Path(__file__).parent
-BENCHMARK_DATA_DIR = ROOT / "data" / "benchmarks"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+BENCHMARK_DATA_DIR = REPO_ROOT / "data" / "benchmarks"
 
 
 @dataclass
@@ -85,7 +85,7 @@ def _run_cea_benchmark(registry: Dict[str, Any]) -> List[BenchmarkCase]:
     """CEA 對標：內建公式 vs RocketCEA（若可用）；或 CEA vs 文獻參考值。"""
     cases: List[BenchmarkCase] = []
     try:
-        from cea_bridge import get_cea_properties, is_cea_available
+        from .cea_bridge import get_cea_properties, is_cea_available
     except ImportError:
         cases.append(BenchmarkCase(
             "CEA-001", "CEA 模組", "N/A", False, 0.0, 0.0, 1.0, 0.05, "cea_bridge 未安裝"
@@ -132,8 +132,8 @@ def _run_gmat_benchmark(registry: Dict[str, Any]) -> List[BenchmarkCase]:
     """GMAT 對標：mission_planning 軌道參數 vs GMAT 輸出（若 GMAT 可用）。"""
     cases: List[BenchmarkCase] = []
     try:
-        from gmat_bridge import is_gmat_available, run_gmat_script
-        from mission_planning import compute_delta_v_budget, MissionSpec, OrbitType
+        from .gmat_bridge import is_gmat_available, run_gmat_script
+        from .mission_planning import compute_delta_v_budget, MissionSpec, OrbitType
         import math
     except ImportError as e:
         cases.append(BenchmarkCase(
@@ -177,7 +177,7 @@ def _run_gmat_benchmark(registry: Dict[str, Any]) -> List[BenchmarkCase]:
             from pathlib import Path
             td = Path("benchmark_pack_output")
             td.mkdir(exist_ok=True)
-            from gmat_bridge import write_minimal_script
+            from .gmat_bridge import write_minimal_script
             script_path = str(td / "gmat_bench.script")
             write_minimal_script(script_path)
             proc = run_gmat_script(script_path, run_and_exit=True, timeout=30)
@@ -198,7 +198,7 @@ def _run_sutton_graves_benchmark(registry: Dict[str, Any]) -> List[BenchmarkCase
     """Sutton-Graves 對標：本專案 ThermalTPS.heating_rate vs 公式手算值。"""
     cases: List[BenchmarkCase] = []
     try:
-        from aerospace_sim import ISA, ThermalTPS
+        from .aerospace_sim import ISA, ThermalTPS
         import math
     except ImportError as e:
         cases.append(BenchmarkCase(

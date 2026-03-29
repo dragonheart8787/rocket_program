@@ -1,3 +1,5 @@
+# 建議使用 pyproject.toml：pip install -e .
+# 以下為精簡依賴清單（與 [project.dependencies] 對齊）
 numpy>=1.20
 matplotlib>=3.3
 scipy>=1.7

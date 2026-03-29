@@ -16,7 +16,7 @@ import math
 import numpy as np
 
 try:
-    from aerospace_sim import AeroTable, make_placeholder_aero_table
+    from .aerospace_sim import AeroTable, make_placeholder_aero_table
 except ImportError:
     AeroTable = None
     make_placeholder_aero_table = None

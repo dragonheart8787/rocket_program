@@ -16,13 +16,13 @@ import urllib.request
 import numpy as np
 import math
 
-from aero_upgrade import get_pluggable_aero, check_coverage, DesignSpace
-from external_validation import external_validation
-from su2_bridge import is_su2_available
-from openfoam_bridge import is_openfoam_available
+from .aero_upgrade import get_pluggable_aero, check_coverage, DesignSpace
+from .external_validation import external_validation
+from .su2_bridge import is_su2_available
+from .openfoam_bridge import is_openfoam_available
 
 
-ROOT = Path(__file__).parent
+ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_CSV = ROOT / "data" / "aero" / "real_aero_coeffs_sample.csv"
 OUT_DIR = ROOT / "benchmark_pack_output"
 

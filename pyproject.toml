@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rocket-program"
+version = "1.0.0"
+description = "Modular rocket design: mission ΔV, propulsion, structures, thermal, GNC, V&V, aero surrogates & benchmarks (Python)."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "dragonheart8787" }]
+keywords = [
+  "rocket",
+  "aerospace",
+  "propulsion",
+  "trajectory",
+  "GNC",
+  "guidance",
+  "thermal",
+  "structures",
+  "MDO",
+  "V-and-V",
+  "verification",
+  "validation",
+  "uncertainty-quantification",
+  "Monte-Carlo",
+  "aerodynamics",
+  "CEA",
+  "RocketCEA",
+  "LEO",
+  "launch-vehicle",
+  "systems-engineering",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Education",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+
+dependencies = [
+  "numpy>=1.20",
+  "matplotlib>=3.3",
+  "scipy>=1.7",
+]
+
+[project.optional-dependencies]
+cea = ["rocketcea>=1.2.0"]
+cantera = ["cantera>=3.0"]
+optuna = ["optuna>=3.0"]
+salib = ["SALib>=1.2"]
+control = ["control>=0.10"]
+all = ["rocketcea>=1.2.0", "cantera>=3.0", "optuna>=3.0", "SALib>=1.2", "control>=0.10"]
+
+[project.urls]
+Homepage = "https://github.com/dragonheart8787/rocket_program"
+Repository = "https://github.com/dragonheart8787/rocket_program"
+Issues = "https://github.com/dragonheart8787/rocket_program/issues"
+
+[tool.setuptools.packages.find]
+include = ["rocket_program*"]

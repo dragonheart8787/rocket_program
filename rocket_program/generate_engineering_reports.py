@@ -10,16 +10,16 @@ import numpy as np
 import math
 import json
 from datetime import datetime
-from verification_validation import (
+from .verification_validation import (
     conservation, convergence, unit_test, model_applicability,
     reference_cases, uncertainty, sensitivity, confidence,
     UncertaintyDistribution, UncertaintyPropagation
 )
-from vv_report_generator import vv_report_generator
-from reproducibility import reproducibility_pack, SimulationConfig, regression_test
-from event_system import event_detector, EventType, Event
-from load_cases import load_case_manager
-from coordinate_time_system import consistency_checker, coord_manager
+from .vv_report_generator import vv_report_generator
+from .reproducibility import reproducibility_pack, SimulationConfig, regression_test
+from .event_system import event_detector, EventType, Event
+from .load_cases import load_case_manager
+from .coordinate_time_system import consistency_checker, coord_manager
 
 print("=== 生成工程報告 ===\n")
 

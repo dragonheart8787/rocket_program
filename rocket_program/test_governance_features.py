@@ -5,12 +5,12 @@
 
 import numpy as np
 import math
-from requirements_traceability import rtm, Requirement, RequirementType, VerificationCase, VerificationMethod
-from external_validation import external_validation, calibration_layer, model_uncertainty_manager, ModelFormUncertainty
-from event_system import event_detector, EventType
-from reproducibility import regression_test, RegressionGate, reproducibility_pack, SimulationConfig
-from documentation_sanitizer import doc_sanitizer
-from verification_validation import UncertaintyDistribution, UncertaintyPropagation
+from .requirements_traceability import rtm, Requirement, RequirementType, VerificationCase, VerificationMethod
+from .external_validation import external_validation, calibration_layer, model_uncertainty_manager, ModelFormUncertainty
+from .event_system import event_detector, EventType
+from .reproducibility import regression_test, RegressionGate, reproducibility_pack, SimulationConfig
+from .documentation_sanitizer import doc_sanitizer
+from .verification_validation import UncertaintyDistribution, UncertaintyPropagation
 
 print("=== 治理與外部驗證功能測試 ===\n")
 
@@ -133,7 +133,7 @@ print(f"  誤差類型: {result['uncertainty_type']}\n")
 print("5) 事件系統 Zeno/抖動測試")
 
 # 模擬事件歷史（抖動）
-from event_system import Event
+from .event_system import Event
 event_history = [
     Event(EventType.MAX_DYNAMIC_PRESSURE, 10.0, np.array([1.0]), {"q": 51000.0}),
     Event(EventType.MAX_DYNAMIC_PRESSURE, 10.05, np.array([1.0]), {"q": 50500.0}),

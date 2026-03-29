@@ -90,7 +90,7 @@ class ReproducibilityPack:
                 ["git", "rev-parse", "HEAD"],
                 capture_output=True,
                 text=True,
-                cwd=Path(__file__).parent
+                cwd=Path(__file__).resolve().parents[1]
             )
             if result.returncode == 0:
                 return result.stdout.strip()

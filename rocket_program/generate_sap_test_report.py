@@ -152,7 +152,7 @@ def _section_04_regression(sap_dir: Path) -> Tuple[List[str], Dict[str, Any]]:
     _load_json(sap_dir / "04_Regression_Gates" / "regression_gates_spec.json", {})
     res: Dict[str, Any] = {"n_checked": 0, "n_passed": 0, "n_failed": 1, "summary": {}}
     try:
-        from reproducibility import regression_test, RegressionGate
+        from .reproducibility import regression_test, RegressionGate
 
         regression_test.set_baseline("coordinate_transform_error", 0.0, "v1.0")
         regression_test.set_tolerance(
@@ -193,7 +193,7 @@ def _section_05_repro(sap_dir: Path) -> Tuple[List[str], Dict[str, Any]]:
     cfg_hash = "—"
     if cfg:
         try:
-            from reproducibility import SimulationConfig
+            from .reproducibility import SimulationConfig
 
             c = SimulationConfig(
                 simulation_id=cfg.get("simulation_id", ""),
@@ -227,7 +227,7 @@ def _section_06_external(sap_dir: Path) -> Tuple[List[str], Dict[str, Any]]:
     lines.append(f"- **KPI**: {spec.get('kpi_metrics', [])}")
     vp = False
     try:
-        from external_validation import external_validation
+        from .external_validation import external_validation
 
         # US Standard Atmosphere 1976 對照表（6 點），使 max_relative_error < 5%
         _isa_ref = {

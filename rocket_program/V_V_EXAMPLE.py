@@ -7,16 +7,16 @@ V&V 與工程化改進使用範例
 import numpy as np
 import math
 import logging
-from verification_validation import (
+from .verification_validation import (
     conservation, convergence, unit_test, model_applicability, 
     reference_cases, uncertainty, sensitivity, confidence
 )
-from event_system import event_detector, mode_switcher, adaptive_integrator, EventType
-from coordinate_time_system import coord_manager, consistency_checker
-from data_contract import aero_data_manager, AeroCoefficientSchema
-from tps_materials import tps_material_lib, tps_failure
-from load_cases import load_case_manager
-from engineering_tools import sim_logger, api_contract, traceability, unit_system
+from .event_system import event_detector, mode_switcher, adaptive_integrator, EventType
+from .coordinate_time_system import coord_manager, consistency_checker
+from .data_contract import aero_data_manager, AeroCoefficientSchema
+from .tps_materials import tps_material_lib, tps_failure
+from .load_cases import load_case_manager
+from .engineering_tools import sim_logger, api_contract, traceability, unit_system
 
 print("=== V&V 與工程化改進範例 ===\n")
 
@@ -77,7 +77,7 @@ print(f"  警告: {check['warnings']}\n")
 
 # ========== 範例 4: 不確定度傳播 ==========
 print("4) 不確定度傳播（Monte Carlo）")
-from verification_validation import UncertaintyDistribution
+from .verification_validation import UncertaintyDistribution
 
 def thrust_calc(mdot, v_e, p_e, p_a, A_e):
     return mdot * v_e + (p_e - p_a) * A_e

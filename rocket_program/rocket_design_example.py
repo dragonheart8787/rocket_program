@@ -2,10 +2,10 @@
 """
 火箭完整設計範例：一鍵執行任務規劃 → 推進 → 結構 → 熱力 → GNC → 報告
 """
-from rocket_system_driver import RocketSystemConfig, run_full_design, export_design_state
-from design_report_generator import generate_design_report
-from mission_planning import OrbitType
-from propulsion_advanced import PropulsionCycle
+from .rocket_system_driver import RocketSystemConfig, run_full_design, export_design_state
+from .design_report_generator import generate_design_report
+from .mission_planning import OrbitType
+from .propulsion_advanced import PropulsionCycle
 
 
 def main():

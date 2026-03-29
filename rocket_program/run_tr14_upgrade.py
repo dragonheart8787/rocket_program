@@ -22,7 +22,7 @@ def main():
     # 1) Benchmark Pack
     print("\n[1/3] Benchmark Pack（CEA + GMAT + Sutton-Graves）...")
     try:
-        from benchmark_pack import run_all_benchmarks, write_report
+        from .benchmark_pack import run_all_benchmarks, write_report
         report = run_all_benchmarks()
         out_dir = "benchmark_pack_output"
         path = write_report(report, out_dir)
@@ -34,7 +34,7 @@ def main():
     # 2) 氣動升級
     print("\n[2/3] 氣動升級（可插拔來源、覆蓋率檢查）...")
     try:
-        from aero_upgrade import (
+        from .aero_upgrade import (
             get_pluggable_aero,
             check_coverage,
             DesignSpace,
@@ -66,7 +66,7 @@ def main():
     # 3) AI Surrogate 管線
     print("\n[3/4] AI Surrogate 管線（氣動代理、fail-closed、Pareto）...")
     try:
-        from ai_surrogate_pipeline import (
+        from .ai_surrogate_pipeline import (
             latin_hypercube_sample,
             SimpleGP,
             build_aero_surrogate,
@@ -109,7 +109,7 @@ def main():
     # 4) 真實氣動 + 專業工具 + V&V
     print("\n[4/4] 真實氣動係數 + 專業工具 + V&V...")
     try:
-        from integrate_real_aero_vv import run_real_aero_vv, write_reports, DEFAULT_CSV
+        from .integrate_real_aero_vv import run_real_aero_vv, write_reports, DEFAULT_CSV
         report = run_real_aero_vv(DEFAULT_CSV)
         paths = write_reports(report, out_dir=Path("benchmark_pack_output"))
         print(f"      SU2 可用: {report['tool_status']['su2_available']}")

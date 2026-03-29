@@ -6,7 +6,7 @@ Von Kármán 與 Tsien 理論使用範例
 
 import numpy as np
 import math
-from von_karman_tsien_theory import von_karman, tsien, design_framework, create_von_karman_nose_profile, create_sears_haack_profile
+from .von_karman_tsien_theory import von_karman, tsien, design_framework, create_von_karman_nose_profile, create_sears_haack_profile
 
 print("=== Von Kármán (馮·卡門) 理論範例 ===\n")
 
@@ -130,7 +130,7 @@ print(f"熱流 q̇ = {q_dot/1000:.2f} kW/m²\n")
 
 # ========== 範例 12: 設計流程框架 ==========
 print("12) 航太設計流程框架（Von Kármán + Tsien 方法論）")
-from von_karman_tsien_theory import DesignRequirement
+from .von_karman_tsien_theory import DesignRequirement
 
 # 定義任務需求
 req = DesignRequirement(
@@ -316,7 +316,7 @@ print(f"最佳膨脹比 = {eps_opt:.2f}\n")
 
 # ========== 範例 23: 完整系統工程循環 ==========
 print("23) 錢學森工程控制論：完整系統工程循環")
-from von_karman_tsien_theory import DesignRequirement
+from .von_karman_tsien_theory import DesignRequirement
 
 req_full = DesignRequirement(
     mission_type="missile",

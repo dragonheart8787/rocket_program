@@ -19,7 +19,10 @@
 ### 快速執行範例
 
 ```bash
-python rocket_design_example.py
+# 自儲存庫根目錄
+python scripts/run_design_example.py
+# 或（已 pip install -e .）
+python -m rocket_program.rocket_design_example
 ```
 
 會在 `rocket_design_output/` 產生：

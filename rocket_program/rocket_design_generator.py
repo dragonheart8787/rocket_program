@@ -14,7 +14,7 @@ import numpy as np
 
 # 依賴既有模組
 try:
-    from von_karman_tsien_theory import (
+    from .von_karman_tsien_theory import (
         VonKarmanTheory,
         create_von_karman_nose_profile,
         create_sears_haack_profile,
@@ -25,12 +25,12 @@ except ImportError:
     create_sears_haack_profile = None
 
 try:
-    from aerospace_sim import EngineeringFormulas
+    from .aerospace_sim import EngineeringFormulas
 except ImportError:
     EngineeringFormulas = None
 
 try:
-    from cea_bridge import get_cea_properties_for_engine
+    from .cea_bridge import get_cea_properties_for_engine
 except ImportError:
     get_cea_properties_for_engine = None
 
